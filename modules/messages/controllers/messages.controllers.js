@@ -49,9 +49,31 @@ const deleteMessage = async (req , res)=>{
         
     }
 }
+const getMessages =async (req , res)=>{
+    
+    let {id} =req.params ;
+
+    try {
+        const user = await User.findOne({_id:id})
+        if(user){
+            const messages = await Messages.find({userId:id })
+            res.json({msg:`success`,messages})
+
+        }else{
+            res.json({msg:`this user is not here`})
+        }
+
+
+        
+    } catch (error) {
+        res.json({msg: 'error in get message',error})
+        
+    }
+}
 
 
 module.exports = {
     addMessage ,
-    deleteMessage
+    deleteMessage ,
+    getMessages
 }
