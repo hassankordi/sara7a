@@ -8,7 +8,7 @@ messageRouter.post('/sendMessage/:id' , validationRequest(addMessageSchema) , ad
 
 messageRouter.post('/deleteMessage' , validationRequest(deleteMessageSchema) , deleteMessage)
 
-messageRouter.get('getMessages/:id' , getMessages)
+messageRouter.get('/getMessages/:id' , getMessages)
 
 
 
