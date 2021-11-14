@@ -15,6 +15,10 @@ app.use(cors())
 app.use(userRouter)
 app.use(messageRouter)
 
+app.get('/hello',(req , res)=>{
+    res.json({msg:'hello in my sara7a app'})
+})
+
 
 
 
