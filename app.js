@@ -5,7 +5,7 @@ const userRouter = require('./modules/users/routes/user.router')
 const messageRouter = require('./modules/messages/routes/messages.router')
 const app = express()
 require('dotenv').config()
-const port = process.env.port
+const port = process.env.port || 3000
 
 connection();
 
