@@ -19,12 +19,15 @@ app.get('/hello',(req , res)=>{
     res.json({msg:'hello in my sara7a app'})
 })
 
+// "engines": {
+//     "node": "v14.17.0" ,
+//     "npm":"6.14.13"
+//     },
 
 
 
 
 
-
-app.listen(port , ()=>{
+app.listen(port || 5000, ()=>{
     console.log(`server is running at ${port}`);
 })
